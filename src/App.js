@@ -8,19 +8,18 @@ import Home from "./Pages/Home";
 import Edit from "./components/EditTransactions";
 import NewTransaction from "./components/NewTransaction";
 import Display from "./components/DisplayTransaction"
-import Transactions from "./components/Transactions"
 
 const API = process.env.REACT_APP_API_URL
 
 const App = () =>{
 
-  const [_, setTransaction] = useState([]);
+  const [,setTransaction] = useState([]);
 
-  const newTransaction = async(nT) => {
+  /*const newTransaction = async(nT) => {
     let response = await axios.post(`${API}/transactions`, nT);
     setTransaction((pT) => [...pT, response.data])
 
-  };
+  };*/
 
   //Same as captain this is pulling data for a new transaction 
   const fetchTransaction = async () => {

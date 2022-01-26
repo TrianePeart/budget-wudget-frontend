@@ -1,30 +1,19 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const Transaction = ({ transaction, id }) => {
+const Transaction = ({transaction, id}) => {
   return (
-    <div className='container'>
-      <section className="Transaction">
-    <table>
-      <Link to={`/transactions/${id}`}>
-          <tbody>
-            <tr>
-              <td>{transaction.date}</td>
-            </tr>
-            <tr>
-              <td>
-                {" "}
-                {transaction.name}
-              </td>
-            </tr>
-            <tr>
-              <td>{transaction.amount}</td>
-            </tr>
-          </tbody>
-          </Link>
-          </table>
-      </section>
-    </div>
+    <tr className="SingleTransaction">
+    <td>{transaction.date}</td>
+    <td>{transaction.source}</td>
+    <td>
+        <Link to={`/transactions/${id}`}>
+            {transaction.amount}
+        </Link>
+    </td>
+</tr>
   );
 };
+
+//source might have to be name. Was name in captains log
 
 export default Transaction;

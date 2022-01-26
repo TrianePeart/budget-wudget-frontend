@@ -1,7 +1,8 @@
 import axios from "axios";
 import {useState, useEffect} from "react";
-import {useParams, useNavigate, Link} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 
+//redo Link
 const API = process.env.REACT_APP_API_URL
 
 const EditTransactions = () =>{
@@ -21,7 +22,7 @@ const EditTransactions = () =>{
   };
     useEffect(() => {
     fetchTransaction();
-  }, [API, id]);
+  }, []);
 
     const handleChange = (event) => {
     setTransaction({...transaction, [event.target.id]:event.target.value});

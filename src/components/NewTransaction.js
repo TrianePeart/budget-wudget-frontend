@@ -29,7 +29,7 @@ const NewTransaction = () =>{
            <form onSubmit={handleSubmit}>
                <h1>New Transaction</h1>
                <label htmlFor="date">
-                   Date:
+                Date:
                </label>
                <input 
                 id="date"
@@ -43,12 +43,28 @@ const NewTransaction = () =>{
                 value={transactions.source}
                 type="text"
                 onChange={handleChange}
+                required
                 />
                <label htmlFor="amount">Amount:</label>
                <input
                 id="amount"
                 value={transactions.amount}
                 type="number"
+                onChange={handleChange}
+                required
+                />
+                <label htmlFor="from">From:</label>
+                <input 
+                id="from"
+                value={transactions.from}
+                type="text"
+                onChange={handleChange}
+                />
+                <label htmlFor="category"><Category></Category>:</label>
+                <input 
+                id="category"
+                value={transactions.category}
+                type="text"
                 onChange={handleChange}
                 />
                 <br/>
