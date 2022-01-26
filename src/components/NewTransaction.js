@@ -60,7 +60,7 @@ const NewTransaction = () =>{
                 type="text"
                 onChange={handleChange}
                 />
-                <label htmlFor="category"><Category></Category>:</label>
+                <label htmlFor="category">Category:</label>
                 <input 
                 id="category"
                 value={transactions.category}
